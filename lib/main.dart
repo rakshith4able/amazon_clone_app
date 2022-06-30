@@ -23,23 +23,7 @@ class MyApp extends StatelessWidget {
             elevation: 0,
             iconTheme: IconThemeData(color: Colors.black),
           )),
-      home: Scaffold(
-        appBar: AppBar(title: const Text('Hello')),
-        body: Column(
-          children: [
-            const Center(
-              child: Text("Welcome"),
-            ),
-            Builder(builder: (context) {
-              return ElevatedButton(
-                  onPressed: () {
-                    Navigator.pushNamed(context, AuthScreen.routeName);
-                  },
-                  child: const Text('Click'));
-            })
-          ],
-        ),
-      ),
+      home: const AuthScreen(),
     );
   }
 }
